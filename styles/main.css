@@ -1,0 +1,92 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: whitesmoke;
+    text-align: center;
+    
+}
+
+.main-window {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 15px 15px 90px #bebebe,
+                -15px -15px 90px #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    background: linear-gradient( rgb(150, 150, 150), rgb(100, 100, 100));
+    text-align: left;
+    min-height: auto;
+    height: 20%
+}
+
+header h1 {
+    font-size: 2.4rem;
+    margin: 2% 90% 1% 4%;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: rgb(120, 120, 120);
+}
+
+.existing-projects {
+    text-align: left;
+    margin-top: 7%;
+    margin-bottom: 7%
+}
+
+.existing-projects h3 {
+    font-size: 2rem;
+    padding-left: 5%;
+}
+
+.existing-list {
+    list-style: none;
+}
+
+.planned-projects {
+    text-align: left;
+    margin-top: 7%;
+    margin-bottom: 7%;
+
+}
+
+.planned-projects h3 {
+    font-size: 2rem;
+    padding-left: 5%;
+}
+
+.planned-list {
+    list-style: none;
+}
+
+.project {
+    margin-top: 3rem;
+    border: 1px solid #dddddd;
+    
+    display: flex;
+    width: 80%;
+    border-radius: 20px;
+    background:  #f0f0f0;
+    box-shadow:  21px 21px 42px #d5d5d5,
+                -21px -21px 42px #ebebeb;
+}
+
+.project-info {
+    text-align: left;
+    padding-top: 1.6rem;
+    padding-right: 0.5rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+}
