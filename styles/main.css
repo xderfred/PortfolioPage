@@ -3,7 +3,6 @@ body {
     margin: 0;
     background-color: whitesmoke;
     text-align: center;
-    
 }
 
 .main-window {
@@ -59,7 +58,6 @@ footer {
     text-align: left;
     margin-top: 7%;
     margin-bottom: 7%;
-
 }
 
 .planned-projects h3 {
@@ -72,21 +70,37 @@ footer {
 }
 
 .project {
-    margin-top: 3rem;
+    width: 75%;
+    margin-top: 3%;
+    margin-bottom: 3%;
     border: 1px solid #dddddd;
-    
-    display: flex;
-    width: 80%;
+    height: 8rem;
     border-radius: 20px;
     background:  #f0f0f0;
     box-shadow:  21px 21px 42px #d5d5d5,
                 -21px -21px 42px #ebebeb;
+    display:flex;
+}
+
+.project-image {
+    margin-top: 45px;
+    height: 6.4rem;
+    width: 6.4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 20px;
 }
 
 .project-info {
-    text-align: left;
-    padding-top: 1.6rem;
-    padding-right: 0.5rem;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
+    margin-top: 1rem;
+    display:block;
+}
+
+.project-texts {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
