@@ -1,25 +1,27 @@
 class project {
-    constructor(name, description, pictureSrc) {
+    constructor(name, description, pictureSrc, link) {
         this.name = name
         this.description = description
         this.pictureSrc = pictureSrc
+        this.link = link
     }
     
 
     name = ""
     description = ""
     pictureSrc = ""
+    link = ""
 }
 
 let existingProjects = []
 let plannedProjects = []
 const d = new project()
-const dividendYieldCalculator = new project("Dividend Calculator", "A Small Calculator for DividendYield and Growth.", "imgs/remainder_icon.png")
-const porfolioWebsite = new project("Project Portfolio", "A list of planned and existing Projects", "imgs/remainder_icon.png")
-const todoNotePlanner = new project("ToDo Note Planner", "A ToDo List with notes and planning", "imgs/remainder_icon.png")
+const dividendYieldCalculator = new project("Dividend Calculator", "A Small Calculator for DividendYield and Growth.", "imgs/remainder_icon.png", "sites/dividendYieldCalculator.html")
+const portfolioWebsite = new project("Project Portfolio", "A list of planned and existing Projects", "imgs/remainder_icon.png", "sites/portfolioWebsite.html")
+const todoNotePlanner = new project("ToDo Note Planner", "A ToDo List with notes and planning", "imgs/remainder_icon.png", "sites/todoNotePlanner.html")
 
 
-existingProjects.push(porfolioWebsite)
+existingProjects.push(portfolioWebsite)
 plannedProjects.push(dividendYieldCalculator)
 plannedProjects.push(todoNotePlanner)
 
@@ -30,13 +32,13 @@ var entry = document.getElementById("project")
 var info = document.getElementById("project-info")
 var title = document.getElementById("project-title")
 
-console.log("porfolioWebsite", porfolioWebsite);
-console.log("porfolioWebsite.name", porfolioWebsite.name);
-console.log("porfolioWebsite.description", porfolioWebsite.description);
-console.log("porfolioWebsite.pictureSrc", porfolioWebsite.pictureSrc);
+console.log("portfolioWebsite", portfolioWebsite);
+console.log("portfolioWebsite.name", portfolioWebsite.name);
+console.log("portfolioWebsite.description", portfolioWebsite.description);
+console.log("portfolioWebsite.pictureSrc", portfolioWebsite.pictureSrc);
 
 existingProjects.forEach((project) => {
-    existingList.innerHTML += `<li class='project project-exist' id='project'>
+    existingList.innerHTML += `<li class='project project-exist' id='project' onclick='window.location = "${project.link}"'>
                                         <img src='${project.pictureSrc}' class='project-image'>
                                         <span class='project-texts'>
                                         <span class='project-title' id='project-title'>
@@ -50,7 +52,7 @@ existingProjects.forEach((project) => {
 })
 
 plannedProjects.forEach((project) => {
-    plannedList.innerHTML += `<li class='project project-planned' id='project'>
+    plannedList.innerHTML += `<li class='project project-planned' id='project' onclick='window.location = "${project.link}">
                                         <img src='${project.pictureSrc}' class='project-image'>
                                         <span class='project-texts'>
                                         <span class='project-title' id='project-title'>

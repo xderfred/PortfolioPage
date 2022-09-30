@@ -80,6 +80,7 @@ footer {
     box-shadow:  21px 21px 42px #d5d5d5,
                 -21px -21px 42px #ebebeb;
     display:flex;
+    cursor: pointer;
 }
 
 .project-image {
@@ -103,4 +104,9 @@ footer {
     margin-bottom: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
+}
+
+.project-link:hover {
+    cursor: pointer;
+    width: 75%;
 }
