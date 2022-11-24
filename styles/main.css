@@ -6,6 +6,7 @@ body {
 }
 
 .main-window {
+    min-width: 350px;
     width: 65%;
     margin-left: auto;
     margin-right: auto;
@@ -28,7 +29,7 @@ header {
 
 header h1 {
     font-size: 2.4rem;
-    margin: 2% 90% 1% 4%;
+    margin: 1em 4em 1em 2em;
 }
 
 main {
@@ -41,38 +42,40 @@ footer {
 
 .existing-projects {
     text-align: left;
-    margin-top: 7%;
-    margin-bottom: 7%
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .existing-projects h3 {
     font-size: 2rem;
-    padding-left: 5%;
+    padding-left: 2rem;
 }
 
 .existing-list {
     list-style: none;
+    padding-inline-start: 2rem;
 }
 
 .planned-projects {
     text-align: left;
-    margin-top: 7%;
-    margin-bottom: 7%;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .planned-projects h3 {
     font-size: 2rem;
-    padding-left: 5%;
+    padding-left: 2rem;
 }
 
 .planned-list {
     list-style: none;
+    padding-inline-start: 2rem;
 }
 
 .project {
-    width: 75%;
-    margin-top: 3%;
-    margin-bottom: 3%;
+    width: 90%;
+    margin-top: 3em;
+    margin-bottom: 3em;
     border: 1px solid #dddddd;
     height: 8rem;
     border-radius: 20px;
@@ -84,7 +87,6 @@ footer {
 }
 
 .project-image {
-    margin-top: 45px;
     height: 6.4rem;
     width: 6.4rem;
     margin-top: 1rem;
@@ -96,7 +98,7 @@ footer {
 
 .project-info {
     margin-top: 1rem;
-    display:block;
+    display: block;
 }
 
 .project-texts {
@@ -108,5 +110,6 @@ footer {
 
 .project-link:hover {
     cursor: pointer;
-    width: 75%;
 }
+
+/* --- Media Queries --- */
