@@ -15,7 +15,7 @@ class project {
 
 let existingProjects = []
 let plannedProjects = []
-const portfolioWebsite = new project("Project Portfolio", "A list of planned and existing Projects", "imgs/remainder_icon.png", "sites/portfolioWebsite.html")
+const portfolioWebsite = new project("Project Portfolio", "A list of planned and existing Projects", "imgs/remainder_icon.png", "file:///C:/Users/Frederik/Documents/Programmieren/Projekte/Web/myWebsites/PortfolioPage/index.html")
 
 const dividendYieldCalculator = new project("Dividend Calculator", "A Small Calculator for DividendYield and Growth.", "imgs/remainder_icon.png", "sites/dividendYieldCalculator.html")
 const todoNotePlanner = new project("ToDo Note Planner", "A ToDo List with notes and planning", "imgs/remainder_icon.png", "sites/todoNotePlanner.html")
