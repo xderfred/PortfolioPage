@@ -15,15 +15,17 @@ class project {
 
 let existingProjects = []
 let plannedProjects = []
-const d = new project()
-const dividendYieldCalculator = new project("Dividend Calculator", "A Small Calculator for DividendYield and Growth.", "imgs/remainder_icon.png", "sites/dividendYieldCalculator.html")
 const portfolioWebsite = new project("Project Portfolio", "A list of planned and existing Projects", "imgs/remainder_icon.png", "sites/portfolioWebsite.html")
+
+const dividendYieldCalculator = new project("Dividend Calculator", "A Small Calculator for DividendYield and Growth.", "imgs/remainder_icon.png", "sites/dividendYieldCalculator.html")
 const todoNotePlanner = new project("ToDo Note Planner", "A ToDo List with notes and planning", "imgs/remainder_icon.png", "sites/todoNotePlanner.html")
+const gameCollection = new project("Game Collection", "A collection of some fun games, e.g. Tetris", "imgs/remainder_icon.png", "sites/todoNotePlanner.html")
 
 
 existingProjects.push(portfolioWebsite)
 plannedProjects.push(dividendYieldCalculator)
 plannedProjects.push(todoNotePlanner)
+plannedProjects.push(gameCollection)
 
 var existingList = document.getElementById("existing-list")
 var plannedList = document.getElementById("planned-list")
@@ -52,7 +54,7 @@ existingProjects.forEach((project) => {
 })
 
 plannedProjects.forEach((project) => {
-    plannedList.innerHTML += `<li class='project project-planned' id='project' onclick='window.location = "${project.link}">
+    plannedList.innerHTML += `<li class='project project-planned' id='project' onclick='window.location = "${project.link}"'>
                                         <img src='${project.pictureSrc}' class='project-image'>
                                         <span class='project-texts'>
                                         <span class='project-title' id='project-title'>
