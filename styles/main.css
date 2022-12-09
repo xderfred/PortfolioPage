@@ -5,6 +5,62 @@ body {
     text-align: center;
 }
 
+.example-box {
+    background-image: linear-gradient(to bottom right, #C4A29E, #FFC6AC);
+    width: 100%;
+    min-height: 100vh;
+    /* overflow: hidden; */
+    background-size: cover;
+    color: white;
+    z-index: 1;
+  }
+  
+  .example-box * {
+    z-index: 2;
+  }
+
+  .background-shapes {
+    content: "";
+    /* position: absolute; */
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    background-size: 100%;
+    animation: 120s infiniteScroll linear repeat;
+    background-repeat: repeat;
+    background-image: url(https://cdn2.hubspot.net/hubfs/53/Pricing%202017%20Assets/marketing/Header_Circles-1.svg);
+  }
+  
+  @-webkit-keyframes infiniteScroll {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    100% {
+      -webkit-transform: translate3d(0, -1692px, 0);
+      transform: translate3d(0, -1692px, 0);
+    }
+  }
+  
+  @keyframes infiniteScroll {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    100% {
+      -webkit-transform: translate3d(0, -1692px, 0);
+      transform: translate3d(0, -1692px, 0);
+    }
+  }
+
+
+
+
+
 .main-window {
     min-width: 350px;
     width: 65%;
@@ -14,32 +70,36 @@ body {
     background: white;
     box-shadow: 15px 15px 90px #bebebe,
                 -15px -15px 90px #ffffff;
-    color:rgb(90, 80, 80)
+    color: #292929;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
-
 header {
-    position: relative;
-    bottom: 0;
+    position: sticky;
+    top: 0;
     left: 0;
     width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    color: #bebebe;
-    background: linear-gradient( rgb(124, 118, 126), rgb(81, 19, 91));
+    height: 45px;
+    color: #C0C5C1;
+    background: #7D8491; /*linear-gradient( rgb(248, 244, 250), rgb(247, 213, 253));*/
     border-radius: 0 0 5px 5px;
-    text-align: center;
-    height: 6em; 
+    z-index: 5;
 }
 
 header h1 {
-    font-size: 2.4rem;
-    margin: 1.3em 4em 1em 4em;
+    position: absolute;
+    /* display: inline; */
+    font-size: 1rem;
+    margin-top: 2em;;
+}
+
+header a {
+    position: relative;
+    display: inline;
+    margin-top: 2em;;
 }
 
 main {
@@ -47,8 +107,7 @@ main {
 }
 
 footer {
-    background-color: rgb(120, 120, 120);
-    display: flex;
+    background-color: #7D8491;
     flex-direction: row;
     align-items: center;
     justify-content: center;
