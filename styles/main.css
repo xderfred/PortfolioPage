@@ -3,63 +3,31 @@ body {
     margin: 0;
     background-color: whitesmoke;
     text-align: center;
+    position: relative;
 }
 
 .example-box {
     background-image: linear-gradient(to bottom right, #C4A29E, #FFC6AC);
     width: 100%;
-    min-height: 100vh;
-    /* overflow: hidden; */
+    height: 100%;
     background-size: cover;
     color: white;
     z-index: 1;
-  }
-  
-  .example-box * {
-    z-index: 2;
+    position: absolute;
   }
 
-  .background-shapes {
+.background-shapes {
     content: "";
-    /* position: absolute; */
     z-index: 2;
     left: 0;
     top: 0;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     background-size: 100%;
-    animation: 120s infiniteScroll linear repeat;
+    animation: 120s infiniteScroll linear infinite;
     background-repeat: repeat;
     background-image: url(https://cdn2.hubspot.net/hubfs/53/Pricing%202017%20Assets/marketing/Header_Circles-1.svg);
-  }
-  
-  @-webkit-keyframes infiniteScroll {
-    0% {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-  
-    100% {
-      -webkit-transform: translate3d(0, -1692px, 0);
-      transform: translate3d(0, -1692px, 0);
-    }
-  }
-  
-  @keyframes infiniteScroll {
-    0% {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-  
-    100% {
-      -webkit-transform: translate3d(0, -1692px, 0);
-      transform: translate3d(0, -1692px, 0);
-    }
-  }
-
-
-
-
+}
 
 .main-window {
     min-width: 350px;
@@ -75,6 +43,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 10;
+    position: relative;
 }
 
 header {
@@ -91,15 +61,24 @@ header {
 
 header h1 {
     position: absolute;
-    /* display: inline; */
-    font-size: 1rem;
-    margin-top: 2em;;
+    font-size: 2rem;
+    padding-left: 2rem;
+    margin: 0;
 }
 
 header a {
-    position: relative;
-    display: inline;
-    margin-top: 2em;;
+    margin-right: 1em;
+    color: #C0C5C1;
+    font-size: 1.2em;;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 2em;
+    bottom: 0.3em;
+    font-size: 0.8em;
 }
 
 main {
@@ -111,7 +90,6 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    
 }
 
 .existing-projects {
@@ -196,3 +174,27 @@ footer a img {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+
+@-webkit-keyframes infiniteScroll {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    100% {
+      -webkit-transform: translate3d(0, -1692px, 0);
+      transform: translate3d(0, -1692px, 0);
+    }
+  }
+  
+  @keyframes infiniteScroll {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    100% {
+      -webkit-transform: translate3d(0, -1692px, 0);
+      transform: translate3d(0, -1692px, 0);
+    }
+  }
