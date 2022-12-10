@@ -1,3 +1,19 @@
+const header = document.getElementById("header-text")
+const headerThree = document.getElementsByTagName("h3")
+
+document.addEventListener("scroll", (e) => {
+    if (headerThree.item(0).getBoundingClientRect().y > 0) {
+        header.innerHTML = "My Projects"
+    }
+    if (headerThree.item(0).getBoundingClientRect().y < 0) {
+        header.innerHTML = headerThree.item(0).innerHTML
+    }
+    if (headerThree.item(1).getBoundingClientRect().y < 0) {
+        header.innerHTML = headerThree.item(1).innerHTML
+    }
+})
+
+
 class project {
     constructor(name, description, pictureSrc, link) {
         this.name = name
