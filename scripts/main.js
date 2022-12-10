@@ -1,16 +1,28 @@
 const header = document.getElementById("header-text")
 const headerThree = document.getElementsByTagName("h3")
 
+const links = document.getElementsByTagName("a")
+
+
+
 document.addEventListener("scroll", (e) => {
-    if (headerThree.item(0).getBoundingClientRect().y > 0) {
+    if (headerThree.item(0).getBoundingClientRect().y > 1) {
         header.innerHTML = "My Projects"
     }
-    if (headerThree.item(0).getBoundingClientRect().y < 0) {
+    if (headerThree.item(0).getBoundingClientRect().y < 1) {
         header.innerHTML = headerThree.item(0).innerHTML
     }
-    if (headerThree.item(1).getBoundingClientRect().y < 0) {
+    if (headerThree.item(1).getBoundingClientRect().y < 1) {
         header.innerHTML = headerThree.item(1).innerHTML
     }
+})
+
+links.item(0).addEventListener("click", () => {
+    header.innerHTML = headerThree.item(0).innerHTML
+})
+
+links.item(1).addEventListener("click", () => {
+    header.innerHTML = headerThree.item(1).innerHTML
 })
 
 class project {
