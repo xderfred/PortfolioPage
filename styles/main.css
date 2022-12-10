@@ -173,3 +173,9 @@ footer a img {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+
+@media (max-width: 860px) {
+    header {
+        height: 55px;
+    }
+}
