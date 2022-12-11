@@ -1,4 +1,4 @@
-const header = document.getElementById("header-text")
+const header = document.getElementById("header-link")
 const headerThree = document.getElementsByTagName("h3")
 
 const links = document.getElementsByTagName("a")
