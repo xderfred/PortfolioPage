@@ -7,14 +7,13 @@ body {
 }
 
 .example-box {
-    background-image: linear-gradient(to bottom right, #545677, #03254E);
     width: 100%;
     height: 100%;
     background-size: cover;
     color: #F0F7F4;
     z-index: 1;
     position: absolute;
-  }
+}
 
 .background-shapes {
     content: "";
@@ -25,6 +24,10 @@ body {
     height: 100%;
     background-size: 100%;
     background-image: url(https://cdn2.hubspot.net/hubfs/53/Pricing%202017%20Assets/marketing/Header_Circles-1.svg);
+}
+
+main {
+    flex: 1;
 }
 
 .main-window {
@@ -75,17 +78,10 @@ header a {
     font-size: 1.2em;;
 }
 
-.links {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    right: 2em;
-    bottom: 0.3em;
-    font-size: 0.8em;
-}
-
-main {
-    flex: 1;
+footer a {
+    margin-bottom: 1em;
+    text-decoration: none;
+    color: #32292F;
 }
 
 footer {
@@ -95,85 +91,6 @@ footer {
     justify-content: center;
     height: 1.5em;
     font-size: 0.8em;
-}
-
-.existing-projects {
-    text-align: left;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.existing-projects h3 {
-    font-size: 2rem;
-    padding-left: 2rem;
-}
-
-.existing-list {
-    list-style: none;
-    padding-inline-start: 2rem;
-}
-
-.planned-projects {
-    text-align: left;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.planned-projects h3 {
-    font-size: 2rem;
-    padding-left: 2rem;
-}
-
-.planned-list {
-    list-style: none;
-    padding-inline-start: 2rem;
-}
-
-.project {
-    width: 90%;
-    margin-top: 3em;
-    margin-bottom: 3em;
-    border: 1px solid #dddddd;
-    height: 8rem;
-    border-radius: 20px;
-    background:  #f0f0f0;
-    box-shadow:  21px 21px 42px #d5d5d5,
-                -21px -21px 42px #ebebeb;
-    display:flex;
-    cursor: pointer;
-    overflow: auto;
-}
-
-.project-image {
-    height: 6rem;
-    width: 6rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    border-radius: 20px;
-}
-
-.project-info {
-    margin-top: 1rem;
-    display: block;
-}
-
-.project-texts {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-.project-link:hover {
-    cursor: pointer;
-}
-
- footer a {
-    margin-bottom: 1em;
-    text-decoration: none;
-    color: #32292F;
 }
 
 @media (max-width: 860px) {

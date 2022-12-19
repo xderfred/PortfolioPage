@@ -2,6 +2,7 @@ const header = document.getElementById("header-link")
 const headerThree = document.getElementsByTagName("h3")
 const links = document.getElementsByTagName("a")
 
+// Set headings as title while scrolling
 document.addEventListener("scroll", (e) => {
     if (headerThree.item(0).getBoundingClientRect().y > 1) {
         header.innerHTML = "My Projects"
@@ -22,6 +23,8 @@ links.item(1).addEventListener("click", () => {
     header.innerHTML = headerThree.item(1).innerHTML
 })
 
+
+// Class Template for each Project
 class project {
     constructor(name, description, pictureSrc, link) {
         this.name = name
@@ -38,30 +41,31 @@ class project {
 
 let existingProjects = []
 let plannedProjects = []
-existingProjects.push(new project("Project Portfolio", "A list of planned and existing Projects", "imgs/portfolio.png", "file:///C:/Users/Frederik/Documents/Programmieren/Projekte/Web/myWebsites/PortfolioPage/sites/portfolio-overview.html"))
+
+// Add Projects to index.html
+existingProjects.push(new project("Project Portfolio", "A list of planned and existing Projects", "imgs/portfolio.png", "sites/portfolio-overview.html"))
+plannedProjects.push(new project("ToDo Note Planner", "A ToDo List with notes and planning", "imgs/to-do-list.png", "sites/fallback.html"))
+plannedProjects.push(new project("Game Collection", "A collection of some fun games, e.g. Tetris", "imgs/dice.png", "sites/fallback.html"))
+plannedProjects.push(new project("QuizApp", "A small but fun Quiz", "imgs/quiz.png", "sites/fallback.html"))
+plannedProjects.push(new project("QRCodeGenerator", "A Generator for your favorite QR-Codes", "imgs/barcode.png", "sites/fallback.html"))
+plannedProjects.push(new project("Acronym Finder", "Find Acronyms and discuss about them", "imgs/speech-bubbles.png", "sites/fallback.html"))
+plannedProjects.push(new project("URL Shortener", "Keep your URLs nice and short", "imgs/search-bar.png", "sites/fallback.html"))
+plannedProjects.push(new project("Audio Player", "Play your favorite Audio", "imgs/speaker.png", "sites/fallback.html"))
+plannedProjects.push(new project("Currency and Measurement Converter", "Calculate between different Currencies and Measurements", "imgs/currency-exchange.png", "sites/fallback.html"))
+plannedProjects.push(new project("Calculator", "A basic calculator", "imgs/calculator.png", "sites/fallback.html"))
 //plannedProjects.push(new project("Dividend Calculator", "A Small Calculator for DividendYield and Growth.", "imgs/remainder_icon.png", "sites/dividendYieldCalculator.html"))
-plannedProjects.push(new project("ToDo Note Planner", "A ToDo List with notes and planning", "imgs/to-do-list.png", "sites/todoNotePlanner.html"))
-plannedProjects.push(new project("Game Collection", "A collection of some fun games, e.g. Tetris", "imgs/dice.png", "sites/todoNotePlanner.html"))
-//plannedProjects.push(new project("GuitarTabs", "A Collection of Tabs that i want to learn on Guitar", "imgs/remainder_icon.png", ""))
-//plannedProjects.push(new project("DepotRebalancing", "A Overview of all assets and needed rebalancing", "imgs/remainder_icon.png", ""))
-plannedProjects.push(new project("QuizApp", "A small but fun Quiz", "imgs/quiz.png", ""))
-plannedProjects.push(new project("QRCodeGenerator", "A Generator for your favorite QR-Codes", "imgs/barcode.png", ""))
+//plannedProjects.push(new project("Luxury Brand", "Website of the next big luxurios brand", "imgs/remainder_icon.png", ""))
+//plannedProjects.push(new project("Realtime Chat", "Chat with somebody", "imgs/remainder_icon.png", ""))
+//plannedProjects.push(new project("Movie Database", "A collection of your favorite movies", "imgs/remainder_icon.png", ""))
 //plannedProjects.push(new project("WeatherApp", "A quick overview over your local Weather Report", "imgs/remainder_icon.png", ""))
 //plannedProjects.push(new project("Online Shop", "A nice and tidy Online Shop", "imgs/remainder_icon.png", ""))
 //plannedProjects.push(new project("Charity Finder", "Find yourself the perfect Charity to donate to", "imgs/remainder_icon.png", ""))
 //plannedProjects.push(new project("TimeZone Tracker", "Keep Track of all the time zones", "imgs/remainder_icon.png", ""))
-plannedProjects.push(new project("Acronym Finder", "Find Acronyms and discuss about them", "imgs/speech-bubbles.png", ""))
-plannedProjects.push(new project("URL Shortener", "Keep your URLs nice and short", "imgs/search-bar.png", ""))
-plannedProjects.push(new project("Audio Player", "Play your favorite Audio", "imgs/speaker.png", ""))
-//plannedProjects.push(new project("Luxury Brand", "Website of the next big luxurios brand", "imgs/remainder_icon.png", ""))
-//lannedProjects.push(new project("Realtime Chat", "Chat with somebody", "imgs/remainder_icon.png", ""))
-//plannedProjects.push(new project("Movie Database", "A collection of your favorite movies", "imgs/remainder_icon.png", ""))
-plannedProjects.push(new project("Currency and Measurement Converter", "Calculate between different Currencies and Measurements", "imgs/currency-exchange.png", ""))
-plannedProjects.push(new project("Calculator", "A basic calculator", "imgs/calculator.png", ""))
+//plannedProjects.push(new project("GuitarTabs", "A Collection of Tabs that i want to learn on Guitar", "imgs/remainder_icon.png", ""))
+//plannedProjects.push(new project("DepotRebalancing", "A Overview of all assets and needed rebalancing", "imgs/remainder_icon.png", ""))
 
-
-var existingList = document.getElementById("existing-list")
-var plannedList = document.getElementById("planned-list")
+const existingList = document.getElementById("existing-list")
+const plannedList = document.getElementById("planned-list")
 
 existingProjects.forEach((project) => {
     existingList.innerHTML += `<li class='project project-exist' id='project' onclick='window.location = "${project.link}"'>
