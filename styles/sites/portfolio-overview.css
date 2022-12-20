@@ -1,0 +1,15 @@
+.example-box {
+    background-image: linear-gradient(to bottom right, #268aab, #0f5877);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+header {
+    background-color: #0f5877;
+}
