@@ -13,3 +13,30 @@ main {
 header {
     background-color: #0f5877;
 }
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 5%;
+    margin: 0.5em;
+}
+
+.card {
+    box-shadow: 21px 21px 42px #d5d5d5,
+    -21px -21px 42px #ebebeb;
+    font-size: 0.6em;
+    padding: 0.5em;
+    border-radius: 12px;
+}
+
+.card-size {
+    max-width: 25%;
+}
+
+.card-low {
+    margin: 2em;
+    max-width: 95%;
+    text-align: left;
+}
